@@ -1,0 +1,30 @@
+target-version = "py310"
+line-length = 120
+exclude = [
+    ".venv",
+    "venv",
+    "env",
+    "alembic",
+    ".git",
+]
+
+
+[lint]
+select = [
+    "A",
+    "B",
+    "F",
+    "E",
+    "W",
+    "I",
+    "N",
+    "ANN",
+    "ASYNC",
+    "PL"
+]
+ignore = ["ANN101"]
+
+
+[lint.extend-per-file-ignores]
+"__init__.py" = ["F401", "I001"]
+"main.py" = ["F401"]
